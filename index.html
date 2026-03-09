@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Genesis 2026 | Registration</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        header { text-align: center; border-bottom: 3px solid #007bff; padding-bottom: 15px; margin-bottom: 25px; }
+        h1 { color: #007bff; margin: 0; }
+        .event-info { background: #eefbff; padding: 15px; border-radius: 8px; margin-bottom: 25px; }
+        fieldset { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        legend { font-weight: bold; color: #333; padding: 0 10px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
+        }
+        .radio-group { display: flex; gap: 20px; align-items: center; }
+        .btn-container { text-align: center; margin-top: 20px; }
+        button { padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        .btn-submit { background-color: #28a745; color: white; margin-right: 10px; }
+        .btn-reset { background-color: #dc3545; color: white; }
+        button:hover { opacity: 0.8; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        footer { text-align: center; margin-top: 40px; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>TECH-GENESIS 2026</h1>
+        <p>National Level Virtual Technical Symposium</p>
+    </header>
+
+    <div class="event-info">
+        <h3>Event Details</h3>
+        <p><strong>Topic:</strong> The AI & Full-Stack Revolution</p>
+        <p><strong>Date:</strong> March 25, 2026 | <strong>Time:</strong> 09:30 AM - 04:30 PM</p>
+        <p><strong>Venue:</strong> Online (Virtual Meeting Link will be shared via Email)</p>
+        <p><strong>Organizer:</strong> AdrolT Technologies Innovative Solutions Pvt LTD</p>
+    </div>
+
+    <form id="regForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" value="studentname.tech@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" value="+91 94444 12345" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Event Selection</legend>
+            <div class="form-group">
+                <label for="workshop">Select Workshop Track:</label>
+                <select id="workshop">
+                    <option value="WebDev">Full-Stack Web Development</option>
+                    <option value="AI">AI & Machine Learning</option>
+                    <option value="Cloud">Cloud Computing Seminar</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Participation Mode:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="mode" value="Online" checked> Online (Virtual)</label>
+                    <label><input type="radio" name="mode" value="Offline"> Offline (On-Campus)</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Details</legend>
+            <div class="form-group">
+                <label for="college">College Name:</label>
+                <input type="text" id="college" placeholder="Enter your college name" required>
+            </div>
+            <div class="form-group">
+                <label for="idproof">Upload ID Proof (PDF/Image):</label>
+                <input type="file" id="idproof">
+            </div>
+            <div class="form-group">
+                <label for="comments">Any specific expectations?</label>
+                <textarea id="comments" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="declare" required>
+                <label style="display:inline;" for="declare">I confirm that the above details are correct.</label>
+            </div>
+        </fieldset>
+
+        <div class="btn-container">
+            <button type="button" class="btn-submit" onclick="submitForm()">Register Now</button>
+            <button type="reset" class="btn-reset">Reset Form</button>
+        </div>
+    </form>
+
+    <div id="participantSection">
+        <h3>Currently Registered Participants</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Event</th>
+                    <th>Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arun Kumar</td>
+                    <td>arunkumar.it@gmail.com</td>
+                    <td>94440 12345</td>
+                    <td>Web Development</td>
+                    <td><strong>Online</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Support Email: <strong>support.techgenesis@adroit.edu.in</strong> | Help Desk: <strong>+91 44 2250 1234</strong></p>
+        <p>&copy; 2026 AdrolT Technologies Innovative Solutions Pvt LTD. All Rights Reserved.</p>
+    </footer>
+</div>
+
+<script>
+    function submitForm() {
+        const name = document.getElementById('name').value;
+        if(name === "") {
+            alert("Please fill out the name field!");
+        } else {
+            alert("Registration Successful for " + name + "! Check your email for the Online link.");
+        }
+    }
+</script>
+
+</body>
+</html>
